@@ -24,3 +24,23 @@ def fibonacci(x):
         return fibonacci(x-1) + fibonacci(x-2)
 
 print(fibonacci(5))
+
+#used no help until this point, was having an issue figuring out how to print all the numbers UP to the X number in the sequence, so I got help for that online 
+#Got the below, but I think we said no loops, so not sure if the i in range (x,x+1) is allowed here
+
+def fibonacci(x):
+    def fib(x):
+        if x == 1:
+            return 0
+        if x == 2:
+            return 1
+        else:
+            return fib(x-1) + fib(x-2)
+        
+    fibonacci_sequence = []
+    for i in range (1,x+1):
+        fibonacci_sequence.append(fib(i))
+        print(fib(i))
+    return fibonacci_sequence
+
+fibonacci(20)
