@@ -1,0 +1,11 @@
+#without recursion
+
+
+def fibonacci(x):
+    n = x-2
+    y = [0,1]
+    while n > 0:
+        y.append(y[-1] + y[-2])
+        n -= 1
+    print(y)
+fibonacci(25)
