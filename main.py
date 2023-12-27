@@ -44,3 +44,20 @@ def fibonacci(x):
     return fibonacci_sequence
 
 fibonacci(20)
+
+#Using List comprehension 
+
+def fibonacci(x):
+    def fib(x):
+        if x == 1:
+            return 0
+        if x == 2:
+            return 1
+        else:
+            y = fib(x - 1) + fib(x - 2)
+            return y
+    fibonacci_sequence = []
+    print([fib(i) for i in range (1,x+1)])
+    return fibonacci_sequence
+
+fibonacci(20)
